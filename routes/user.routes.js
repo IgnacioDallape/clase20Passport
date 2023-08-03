@@ -13,7 +13,7 @@ router.get('/all', (req,res) => {
         console.log(err)
         res.send(err)
     }
-})
+})  
 
 router.post('/register', passport.authenticate('register', {failureRedirect:'/users/failedRegister'}), (req, res) => {  //middleware con 2 argumentos, el primero lleva el nombnre de la estrategia de passport que quiero usar, register en este caso, y el segundo es para saber que hacer si fallala estrategia, por ejemplo puedo redirigir a algun lado
     try{
